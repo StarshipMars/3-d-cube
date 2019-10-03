@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            width: 250px;
+            height: 250px;
+            position: relative;
+            left: 700px;
+            top: 300px;
+        }
+        #cubic{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            transform-style: preserve-3d;
+            transform: rotate(0deg);
+            transition: 2s;
+        }
+        #cubic figure{
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            border: 2px solid red;
+            width: 216px;
+            height: 216px;
+            line-height: 216px;
+            vertical-align: center;
+            text-align: center;
+            opacity: 0;
+            transition: 3s;
+        }
+        .show_change{
+            opacity: 0.3!important;
+        }
+        #cubic figure:nth-child(1){
+            background-color: #fff;
+        }
+        #cubic figure:nth-child(2){
+            background-color: #E0E08D;
+        }
+	    #cubic figure:nth-child(3){
+            background-color: blue;
+        } 
+	    #cubic figure:nth-child(4){
+            background-color: #76FA76;
+        } 
+	    #cubic figure:nth-child(5){
+             background-color: #F67979;
+             }
+	    #cubic figure:nth-child(6){
+            background-color: orange;
+        } 
+
+        .btn{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: #2424F7;
+            border-radius: 50%;
+            position: relative;
+            top: 320px;
+            left: 55px;
+            opacity: 0;
+            transition: 1s;
+	   }
+    </style>
+</head>
+<body>
+
+            <div class="container">
+                <a href="#" class="btn" id="0"></a>
+                <a href="#" class="btn" id="1"></a>
+                <a href="#" class="btn" id="2"></a>
+                <a href="#" class="btn" id="3"></a>
+                <a href="#" class="btn" id="4"></a>
+                <a href="#" class="btn" id="5"></a>
+        
+                <div id="cubic">
+                    <figure class="side">1</figure>
+                    <figure class="side">2</figure>
+                    <figure class="side">3</figure>
+                    <figure class="side">4</figure>
+                    <figure class="side">5</figure>
+                    <figure class="side">6</figure>
+                </div>
+            </div>  
+    
+    <script src="3d.js"></script>
+    <script>
+        let newCub = new Cube('.container');
+    </script>
+</body>
+</html>
